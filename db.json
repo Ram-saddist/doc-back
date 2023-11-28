@@ -1,0 +1,66 @@
+{
+  "doctors": [
+    {
+      "name": "Satya Deep",
+      "salary": "4000000",
+      "gender": "Male",
+      "age": "26",
+      "specialization": "cardio",
+      "id": 1
+    },
+    {
+      "name": "brahmam",
+      "salary": "4000000",
+      "gender": "Male",
+      "age": "26",
+      "specialization": "ghgj",
+      "id": 2
+    },
+    {
+      "name": "Sa",
+      "salary": "4000000",
+      "gender": "Male",
+      "age": "26",
+      "specialization": "ghgj",
+      "id": 3
+    }
+  ],
+  "patients": [
+    {
+      "name": "shravan",
+      "weight": "85",
+      "gender": "Male",
+      "age": "26",
+      "disease": "Headache",
+      "doctor": "Satya Deep",
+      "id": 1
+    },
+    {
+      "name": "Satya Deep G",
+      "weight": "90",
+      "gender": "Male",
+      "age": "29",
+      "disease": "Headache",
+      "doctor": "brahmam",
+      "id": 2
+    },
+    {
+      "name": "sdfbdhf",
+      "weight": "3324",
+      "gender": "sndkjs",
+      "age": "3243243",
+      "disease": "bfjasjkzjd",
+      "doctor": "Sa",
+      "id": 3
+    },
+    {
+      "name": "Hhgg",
+      "weight": "3324",
+      "gender": "sndkjs",
+      "age": "29",
+      "disease": "bfjasjkzjd",
+      "doctor": "Sa",
+      "id": 4
+    }
+  ]
+}
