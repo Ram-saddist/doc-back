@@ -13,16 +13,24 @@
       "salary": "4000000",
       "gender": "Male",
       "age": "26",
-      "specialization": "ghgj",
+      "specialization": "dental",
       "id": 2
     },
     {
-      "name": "Sa",
+      "name": "Sam",
       "salary": "4000000",
       "gender": "Male",
       "age": "26",
-      "specialization": "ghgj",
+      "specialization": "Bones",
       "id": 3
+    },
+    {
+      "name": "Anu",
+      "salary": "7000000",
+      "gender": "Male",
+      "age": "26",
+      "specialization": "Blood Pressure",
+      "id": 4
     }
   ],
   "patients": [
@@ -45,21 +53,21 @@
       "id": 2
     },
     {
-      "name": "sdfbdhf",
-      "weight": "3324",
-      "gender": "sndkjs",
-      "age": "3243243",
-      "disease": "bfjasjkzjd",
-      "doctor": "Sa",
+      "name": "Abdul",
+      "weight": "86",
+      "gender": "Male",
+      "age": "29",
+      "disease": "Bones",
+      "doctor": "Sam",
       "id": 3
     },
     {
-      "name": "Hhgg",
-      "weight": "3324",
-      "gender": "sndkjs",
-      "age": "29",
-      "disease": "bfjasjkzjd",
-      "doctor": "Sa",
+      "name": "Ram",
+      "weight": "80",
+      "gender": "Male",
+      "age": "25",
+      "disease": "BP",
+      "doctor": "Anu",
       "id": 4
     }
   ]
