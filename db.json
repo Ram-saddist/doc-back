@@ -40,7 +40,11 @@
       "gender": "Male",
       "age": "26",
       "disease": "Headache",
-      "doctor": "Satya Deep",
+      "doctor": {
+        "id": 1,
+        "name": "Satya Deep",
+        "specialization": "cardio"
+      },
       "id": 1
     },
     {
@@ -49,7 +53,11 @@
       "gender": "Male",
       "age": "29",
       "disease": "Headache",
-      "doctor": "brahmam",
+      "doctor": {
+        "id": 2,
+        "name": "Teja",
+        "specialization": "Muscles"
+      },
       "id": 2
     },
     {
@@ -58,16 +66,25 @@
       "gender": "Male",
       "age": "29",
       "disease": "Bones",
-      "doctor": "Sam",
+      "doctor": {
+        "id": 3,
+        "name": "Sam",
+        "specialization": "Bones"
+      },
       "id": 3
     },
     {
-      "name": "Ram",
-      "weight": "80",
-      "gender": "Male",
-      "age": "25",
-      "disease": "BP",
-      "doctor": "Anu",
+      "name": "ram teja",
+      "weight": "65",
+      "gender": "male",
+      "age": "20",
+      "disease": "Brain",
+      "doctorId": "2",
+      "doctor": {
+        "id": 2,
+        "name": "Teja",
+        "specialization": "Muscles"
+      },
       "id": 4
     }
   ]

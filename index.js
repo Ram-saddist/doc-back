@@ -1,10 +1,41 @@
-const jsonServer = require("json-server"); // importing json-server library
+const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 5000; //  chose port from here like 8080, 3001
+const port = process.env.PORT || 5000;
+
+server.use(jsonServer.bodyParser); // Enable parsing of request body
+
+server.post('/patients', (req, res) => {
+  const newPatient = req.body;
+  const doctors = router.db.get('doctors').value();
+
+  // Find the associated doctor details using doctorId
+  const associatedDoctor = doctors.find(doctor => doctor.id === Number(newPatient.doctorId));
+
+  // Add doctor details to the new patient
+  if (associatedDoctor) {
+    console.log("associate doctor",associatedDoctor)
+    newPatient.doctor = {
+      id: associatedDoctor.id,
+      name: associatedDoctor.name,
+      specialization: associatedDoctor.specialization
+    };
+  }
+
+  // Generate a unique ID for the new patient based on the existing patients' array length
+  newPatient.id = router.db.get('patients').value().length + 1;
+  console.log("final newptient",newPatient)
+  // Add the new patient to the patients array
+  router.db.get('patients').push(newPatient).write();
+
+  // Respond with the newly created patient data
+  res.json(newPatient);
+});
 
 server.use(middlewares);
 server.use(router);
 
-server.listen(port);
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
