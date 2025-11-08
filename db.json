@@ -39,6 +39,8 @@
       "weight": "85",
       "gender": "Male",
       "age": "26",
+      "email":"shravan@gmail.com",
+      "password":"shravan",
       "disease": "Headache",
       "doctor": {
         "id": 1,
@@ -52,6 +54,8 @@
       "weight": "90",
       "gender": "Male",
       "age": "29",
+       "email":"satya@gmail.com",
+      "password":"satya",
       "disease": "Headache",
       "doctor": {
         "id": 2,
@@ -65,6 +69,8 @@
       "weight": "86",
       "gender": "Male",
       "age": "29",
+       "email":"abdul@gmail.com",
+      "password":"abdul",
       "disease": "Bones",
       "doctor": {
         "id": 3,
@@ -78,6 +84,8 @@
       "weight": "65",
       "gender": "male",
       "age": "20",
+       "email":"ram@gmail.com",
+      "password":"ram",
       "disease": "Brain",
       "doctorId": "2",
       "doctor": {
