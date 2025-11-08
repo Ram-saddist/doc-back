@@ -5,6 +5,11 @@ const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 5000;
 const cors= require("cors")
 server.use(jsonServer.bodyParser); // Enable parsing of request body
+server.use(cors()); // Enable CORS
+server.use(jsonServer.bodyParser);
+server.use(require("express").urlencoded({ extended: true })); // Enable URL-encoded body parsing
+server.use(middlewares);
+
 
 server.post('/patients', (req, res) => {
   const newPatient = req.body;
@@ -65,10 +70,7 @@ server.post('/login', (req, res) => {
 
 
 
-server.use(cors()); // Enable CORS
-server.use(jsonServer.bodyParser);
-server.use(require("express").urlencoded({ extended: true })); // Enable URL-encoded body parsing
-server.use(middlewares);
+
 server.use(router);
 
 
