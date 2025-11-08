@@ -33,6 +33,38 @@ server.post('/patients', (req, res) => {
   res.send("added successfllyu");
 });
 
+//login route
+server.post('/login', (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ message: "Email and password are required" });
+  }
+
+  // Access patients data from db.json
+  const patients = router.db.get('patients').value();
+
+  // Find the matching patient by email and password
+  const patient = patients.find(
+    p => p.email === email && p.password === password
+  );
+
+  if (patient) {
+    // Exclude password before sending response
+    const { password, ...safePatientData } = patient;
+    return res.status(200).json({
+      message: "Login successful",
+      patient: safePatientData
+    });
+  } else {
+    return res.status(401).json({ message: "Invalid email or password" });
+  }
+});
+
+
+
+
+
 server.use(middlewares);
 server.use(router);
 
